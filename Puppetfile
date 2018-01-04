@@ -1,3 +1,4 @@
+
 # This file manages Puppet module dependencies.
 #
 # It works a lot like Bundler. We provide some core modules by
@@ -29,7 +30,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.13.0"
+github "boxen", "3.11.1"
 
 # Support for default hiera data in modules
 
@@ -57,11 +58,23 @@ github "ruby",        "8.6.0"
 github "stdlib",      "4.7.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
+github "divvy",       "1.0.1"
+github "vim",         "1.0.5"
+github "bash",        "1.1.0"
+github "osx",         "2.8.1"
+github "python",      "2.0.1"
+github "vagrant",     "3.3.4"
+github "virtualbox",  "5.0.14"
+github "iterm2",      "1.2.5"
+github "vlc",         "1.1.0"
+github "textmate",    "1.1.0"
+github "caffeine",    "1.0.0"
+github "jq",          "1.0.0"
+
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 # github "elasticsearch", "2.8.0"
-# github "mysql",         "2.0.1"
 # github "postgresql",  "4.0.1"
 # github "redis",       "3.1.0"
 # github "sysctl",      "1.0.1"

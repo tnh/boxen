@@ -57,7 +57,16 @@ node default {
   include git
   include hub
   include nginx
-
+  include divvy
+  include bash
+  include bash::completion
+  include vim
+  include iterm2::stable
+  include python
+  include vlc
+  include textmate::textmate2::beta
+  include caffeine
+  include jq
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
@@ -70,6 +79,16 @@ node default {
 
   # default ruby versions
   ruby::version { '2.4.1': }
+
+  osx::recovery_message { 'If this Mac is found, please call 0427837953': }
+  include osx::dock::autohide
+  include osx::global::enable_dark_mode
+  class { 'osx::global::natural_mouse_scrolling':
+    enabled => false
+  }
+  class { 'osx::dock::hot_corners':
+    bottom_right => "Start Screen Saver"
+  }
 
   # common, useful packages
   package {
